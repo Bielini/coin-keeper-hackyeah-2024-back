@@ -60,7 +60,7 @@ public class SavingTips {
             "Inwestuj w jakość, nie ilość.");
 
     public String getRandomTip(){
-        return tips.get(new Random().nextInt(50));
+        return tips.get(new Random().nextInt(tips.size()));
     }
 
 }
