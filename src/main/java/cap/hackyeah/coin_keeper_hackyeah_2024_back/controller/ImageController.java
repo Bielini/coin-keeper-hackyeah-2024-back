@@ -21,6 +21,6 @@ public class ImageController {
     @PostMapping("/image")
     public String generate(@RequestBody String prompt) {
         log.info("Incoming prompt: {}", prompt);
-        return imageGenerationService.generate(prompt, "512x512", "openai/dall-e-2");
+        return imageGenerationService.generate(prompt, "256x256", "openai/dall-e-2");
     }
 }
