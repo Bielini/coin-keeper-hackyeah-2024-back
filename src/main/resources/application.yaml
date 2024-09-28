@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: coin-keeper-hackyeah-2024-back
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driverClassName: org.h2.Driver
+    username: root
+    password: ''
+  h2:
+    console:
+      enabled: true
