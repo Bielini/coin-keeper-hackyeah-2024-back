@@ -2,7 +2,7 @@ package cap.hackyeah.coin_keeper_hackyeah_2024_back.service.impl;
 
 import java.util.Optional;
 
-import cap.hackyeah.coin_keeper_hackyeah_2024_back.dto.Player;
+import cap.hackyeah.coin_keeper_hackyeah_2024_back.entity.Player;
 import cap.hackyeah.coin_keeper_hackyeah_2024_back.repository.LoginRepository;
 import cap.hackyeah.coin_keeper_hackyeah_2024_back.service.LoginService;
 import org.springframework.beans.factory.annotation.Autowired;

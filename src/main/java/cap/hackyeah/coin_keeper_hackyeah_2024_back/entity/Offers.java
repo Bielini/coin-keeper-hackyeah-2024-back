@@ -1,4 +1,4 @@
-package cap.hackyeah.coin_keeper_hackyeah_2024_back.dto;
+package cap.hackyeah.coin_keeper_hackyeah_2024_back.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

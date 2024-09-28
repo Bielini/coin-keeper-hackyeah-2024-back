@@ -1,4 +1,4 @@
-package cap.hackyeah.coin_keeper_hackyeah_2024_back.dto;
+package cap.hackyeah.coin_keeper_hackyeah_2024_back.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -32,4 +32,6 @@ public class Player {
     private Long balance;
 
     private Long goal;
+
+    private boolean lowBalanceAlert;
 }

@@ -1,6 +1,6 @@
 package cap.hackyeah.coin_keeper_hackyeah_2024_back.controller;
 
-import cap.hackyeah.coin_keeper_hackyeah_2024_back.dto.Player;
+import cap.hackyeah.coin_keeper_hackyeah_2024_back.entity.Player;
 import cap.hackyeah.coin_keeper_hackyeah_2024_back.service.impl.RegisterServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
