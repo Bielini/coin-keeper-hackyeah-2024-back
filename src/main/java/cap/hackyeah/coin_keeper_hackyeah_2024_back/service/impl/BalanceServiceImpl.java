@@ -16,7 +16,7 @@ public class BalanceServiceImpl {
         return playerRepository.findById(userId).get().getBalance();
     }
 
-    public Long addMoney(Long userId, Long money){
+    public Long addMoney(long userId, long money){
         Player player = playerRepository.findById(userId).get();
         Long currentBalance = getBalance(userId);
         player.setBalance(currentBalance+money);
@@ -24,4 +24,10 @@ public class BalanceServiceImpl {
     }
 
 
+    public Long deductMoney(long userId, long amount) {
+        Player player = playerRepository.findById(userId).get();
+        Long currentBalance = getBalance(userId);
+        player.setBalance(currentBalance-amount);
+        return playerRepository.save(player).getBalance();
+    }
 }

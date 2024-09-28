@@ -19,4 +19,10 @@ public class BalanceController {
     public Long addMoney(@PathVariable long id, @PathVariable long amount) {
         return balanceService.addMoney(id, amount);
     }
+
+    @PutMapping("addExpense/{id}/{amount}")
+    public Long addExpense(@PathVariable long id, long amount) {
+        return balanceService.deductMoney(id, amount);
+    }
+
 }
