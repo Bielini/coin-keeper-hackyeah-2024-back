@@ -13,7 +13,7 @@ public class LoginServiceImpl implements LoginService {
 
 	@Autowired LoginRepository loginRepository;
 
-	@Override public boolean signIn(String username, String password) {
+	@Override public boolean logIn(String username, String password) {
 		Optional<Player> playerFromDB = loginRepository.findByUsername(username);
 		return playerFromDB
 				.map(player ->
@@ -22,7 +22,8 @@ public class LoginServiceImpl implements LoginService {
 				.orElse(false);
 	}
 
-	@Override public boolean signOut() {
-		return false;
+	@Override public boolean logOut(boolean logOutButton) {
+		// TODO: to kill session on log out
+		return logOutButton;
 	}
 }

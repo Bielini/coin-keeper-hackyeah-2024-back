@@ -27,10 +27,9 @@ public class Player {
     @Column(unique = true)
     private String username;
 
-
     private String password;
 
     private Integer balance;
 
-    private Integer limitation;
+    private Integer goal;
 }

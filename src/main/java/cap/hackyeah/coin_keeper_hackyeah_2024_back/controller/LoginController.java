@@ -10,24 +10,24 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/login")
+@RequestMapping("/api/coinkeeper")
 public class LoginController {
 
 	@Autowired LoginService loginService;
 
-	@GetMapping
-	public ResponseEntity<String> signIn(@RequestParam String username,
+	@GetMapping("/login")
+	public ResponseEntity<String> logIn(@RequestParam String username,
 			@RequestParam String password) {
-		if (loginService.signIn(username, password)){
+		if (loginService.logIn(username, password)){
 			return ResponseEntity.status(HttpStatus.OK).body("Login successful.");
 		}else {
 			return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Unauthorized user.");
 		}
-
 	}
 
-	public ResponseEntity<String> signOut(){
-
+	@GetMapping("/logout")
+	public ResponseEntity<String> logOut(@RequestParam boolean logOutButton){
+		loginService.logOut(logOutButton);
 		return ResponseEntity.status(HttpStatus.OK).body("User logged out.");
 	}
 }
