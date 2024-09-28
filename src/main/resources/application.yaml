@@ -9,3 +9,8 @@ spring:
   h2:
     console:
       enabled: true
+  monster:
+    health:
+      weak: 1000
+      strong: 2000
+      powerful: 3000
