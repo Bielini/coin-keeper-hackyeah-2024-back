@@ -9,3 +9,9 @@ spring:
   h2:
     console:
       enabled: true
+server:
+  servlet:
+    session:
+      timeout: 5000
+      cookie:
+        http-only: true
