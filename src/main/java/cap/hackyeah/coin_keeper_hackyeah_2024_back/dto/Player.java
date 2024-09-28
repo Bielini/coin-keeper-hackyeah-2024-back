@@ -29,7 +29,7 @@ public class Player {
 
     private String password;
 
-    private Integer balance;
+    private Long balance;
 
-    private Integer goal;
+    private Long goal;
 }

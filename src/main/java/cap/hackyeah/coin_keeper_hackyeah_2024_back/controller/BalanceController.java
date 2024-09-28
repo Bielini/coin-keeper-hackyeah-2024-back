@@ -1,13 +1,22 @@
 package cap.hackyeah.coin_keeper_hackyeah_2024_back.controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import cap.hackyeah.coin_keeper_hackyeah_2024_back.service.impl.BalanceServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class BalanceController {
 
-    @GetMapping("/myBalance")
-    public String getBalance(){
-        return "The current balance";
+    @Autowired
+    BalanceServiceImpl balanceService;
+
+    @GetMapping("/myBalance/{id}")
+    public Long getBalance(@PathVariable long id) {
+        return balanceService.getBalance(id);
+    }
+
+    @PutMapping("addMoney/{id}/{amount}")
+    public Long addMoney(@PathVariable long id, @PathVariable long amount) {
+        return balanceService.addMoney(id, amount);
     }
 }
