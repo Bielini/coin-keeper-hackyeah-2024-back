@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class SavingTipsController {
 
-    private SavingTips tips = new SavingTips();
+    private final SavingTips tips = new SavingTips();
 
     @GetMapping("/tip")
     String getTip(){
